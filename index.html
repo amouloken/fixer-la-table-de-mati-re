@@ -1,79 +1,338 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accéder au produit</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0f172a, #1e3a8a);
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      text-align: center;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    .container {
-      max-width: 600px;
-      padding: 30px;
-    }
+<title>Corriger une Table des Matières Word</title>
 
-    h1 {
-      font-size: 42px;
-      margin-bottom: 15px;
-    }
+<style>
 
-    p {
-      font-size: 18px;
-      line-height: 1.6;
-      margin-bottom: 30px;
-    }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    .btn {
-      display: inline-block;
-      background: #22c55e;
-      color: white;
-      padding: 16px 32px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-size: 20px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:#f8fafc;
+    color:#1e293b;
+}
 
-    .btn:hover {
-      background: #16a34a;
-      transform: scale(1.05);
-    }
+.hero{
+    max-width:1200px;
+    margin:auto;
+    padding:70px 30px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
 
-    .note {
-      margin-top: 20px;
-      font-size: 14px;
-      opacity: 0.8;
-    }
-  </style>
+.badge{
+    display:inline-block;
+    background:#dcfce7;
+    color:#166534;
+    padding:8px 15px;
+    border-radius:50px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+h1{
+    font-size:55px;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+h1 span{
+    color:#2563eb;
+}
+
+.description{
+    font-size:20px;
+    line-height:1.7;
+    color:#475569;
+    margin-bottom:30px;
+}
+
+.benefits{
+    margin-bottom:30px;
+}
+
+.benefits div{
+    margin-bottom:12px;
+    font-size:18px;
+}
+
+.buy-btn{
+    display:inline-block;
+    background:#16a34a;
+    color:white;
+    text-decoration:none;
+    padding:18px 35px;
+    border-radius:12px;
+    font-size:22px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.buy-btn:hover{
+    transform:translateY(-3px);
+    background:#15803d;
+}
+
+.secure{
+    margin-top:15px;
+    color:#64748b;
+}
+
+.preview{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.card img{
+    width:100%;
+    display:block;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.bad{
+    color:#dc2626;
+    font-weight:bold;
+}
+
+.good{
+    color:#16a34a;
+    font-weight:bold;
+}
+
+.learn{
+    background:white;
+    padding:70px 30px;
+}
+
+.learn-container{
+    max-width:1000px;
+    margin:auto;
+}
+
+.learn h2{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:40px;
+}
+
+.learn-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.learn-item{
+    background:#f1f5f9;
+    padding:25px;
+    border-radius:15px;
+}
+
+.learn-item h3{
+    margin-bottom:10px;
+}
+
+footer{
+    text-align:center;
+    padding:50px 20px;
+}
+
+footer a{
+    background:#16a34a;
+    color:white;
+    text-decoration:none;
+    padding:18px 35px;
+    border-radius:12px;
+    font-size:22px;
+    font-weight:bold;
+}
+
+@media(max-width:900px){
+
+.hero{
+    grid-template-columns:1fr;
+}
+
+h1{
+    font-size:40px;
+}
+
+}
+
+</style>
+
 </head>
+
 <body>
 
-  <div class="container">
-    <h1>Accédez à mon produit</h1>
+<section class="hero">
 
-    <p>
-      Cliquez sur le bouton ci-dessous pour être redirigé vers la page de paiement sécurisée Stripe.
-    </p>
+<div>
 
-    <a class="btn" href="https://buy.stripe.com/dRm28r5XzebPfuY9h13F606" target="_blank">
-      Acheter maintenant
-    </a>
+<span class="badge">
+Guide Word Professionnel
+</span>
 
-    <p class="note">
-      Paiement sécurisé via Stripe.
-    </p>
-  </div>
+<h1>
+Corrigez votre
+<span>table des matières</span>
+en quelques minutes
+</h1>
+
+<p class="description">
+
+Apprenez exactement comment supprimer les paragraphes indésirables,
+corriger les styles Word et générer une table des matières
+propre et professionnelle.
+
+</p>
+
+<div class="benefits">
+
+<div>✅ Méthode étape par étape</div>
+
+<div>✅ Compatible Word 2016, 2019, 2021 et Microsoft 365</div>
+
+<div>✅ Guide PDF téléchargeable immédiatement</div>
+
+<div>✅ Résultat professionnel garanti</div>
+
+</div>
+
+<a
+class="buy-btn"
+href="https://buy.stripe.com/dRm28r5XzebPfuY9h13F606"
+target="_blank">
+
+Obtenir le guide - 5€
+
+</a>
+
+<p class="secure">
+
+🔒 Paiement sécurisé via Stripe
+
+</p>
+
+</div>
+
+<div class="preview">
+
+<div class="card">
+
+<img
+src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80"
+alt="Document désorganisé">
+
+<div class="card-content">
+
+<h3>Avant</h3>
+
+<p class="bad">
+
+Texte parasite dans la table des matières,
+numérotation incorrecte et mise en page confuse.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img
+src="https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=900&q=80"
+alt="Document professionnel">
+
+<div class="card-content">
+
+<h3>Après</h3>
+
+<p class="good">
+
+Table des matières propre,
+claire et prête pour une remise professionnelle.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="learn">
+
+<div class="learn-container">
+
+<h2>Ce que vous allez apprendre</h2>
+
+<div class="learn-grid">
+
+<div class="learn-item">
+<h3>1. Identifier le problème</h3>
+<p>Comprendre pourquoi du texte apparaît dans la table des matières.</p>
+</div>
+
+<div class="learn-item">
+<h3>2. Corriger les styles</h3>
+<p>Utiliser correctement les titres Word.</p>
+</div>
+
+<div class="learn-item">
+<h3>3. Régénérer la table</h3>
+<p>Créer une table des matières propre automatiquement.</p>
+</div>
+
+<div class="learn-item">
+<h3>4. Vérifier le résultat</h3>
+<p>Obtenir une présentation professionnelle en quelques clics.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2 style="margin-bottom:30px;">
+Prêt à corriger votre document ?
+</h2>
+
+<a
+href="https://buy.stripe.com/dRm28r5XzebPfuY9h13F606"
+target="_blank">
+
+Télécharger le guide maintenant
+
+</a>
+
+</footer>
 
 </body>
 </html>
